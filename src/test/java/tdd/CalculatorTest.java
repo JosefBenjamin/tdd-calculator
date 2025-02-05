@@ -68,7 +68,24 @@ public class CalculatorTest {
         assertEquals(expected, actual);
     }
 
+    @Test
+    @DisplayName("Test for parsing String to numbers")
+    void stringToNumbers() {
+        String inputOne = "50";
+        String inputTwo = "50";
+        int expected = Integer.parseInt(inputOne) + Integer.parseInt(inputTwo);
+        int actual = calculator.add("50", "50");
+        assertEquals(expected, actual);
+    }
 
+    @Test
+    @DisplayName("Test for Array of numbers that can be added together")
+    void arrayOfNumbers() {
+        int[] inputArray = {2, 3, 4};
+        int expected = 9;
+        int actual = calculator.add(inputArray);
+        assertEquals(expected, actual);
 
+    }
 
 }
